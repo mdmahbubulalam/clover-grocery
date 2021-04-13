@@ -4,7 +4,7 @@ import { useHistory } from 'react-router';
 const ManageProduct = () => {
     const [products,setProducts] = useState([]);
     useEffect(()=> {
-        fetch('http://localhost:5000/products')
+        fetch('https://stormy-thicket-58401.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
@@ -18,7 +18,7 @@ const ManageProduct = () => {
     }
     
     const deleteProduct = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://stormy-thicket-58401.herokuapp.com/delete/${id}`,{
             method: "DELETE"
         })
         .then(res => res.json())

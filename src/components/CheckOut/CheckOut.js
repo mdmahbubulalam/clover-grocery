@@ -9,7 +9,7 @@ const CheckOut = () => {
     const {id} = useParams();
     const [products,setProducts] = useState([]);
     useEffect(()=> {
-        fetch('http://localhost:5000/products')
+        fetch('https://stormy-thicket-58401.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
@@ -29,7 +29,7 @@ const CheckOut = () => {
             date: new Date().toDateString('dd/mm/yyyy')
         }
 
-        const url = `http://localhost:5000/addOrder`
+        const url = `https://stormy-thicket-58401.herokuapp.com/addOrder`
         fetch(url, {
             method:'POST',
             headers:{

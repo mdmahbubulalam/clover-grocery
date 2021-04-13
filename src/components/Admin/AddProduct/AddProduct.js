@@ -13,7 +13,7 @@ const AddProduct = () => {
             weight:data.weight,
             imageURL:imageURL
         }
-        const url = `http://localhost:5000/addProduct`
+        const url = `https://stormy-thicket-58401.herokuapp.com/addProduct`
         fetch(url, {
             method:'POST',
             headers:{
